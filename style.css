@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Convergence&family=Inika:wght@400;700&family=Kavoon&display=swap');
+
+
+#container{
+    width: 1280px;
+    background-color: black;
+    margin: 0 auto;
+}
+header{
+    width: 1280px;
+    height: 200px;
+    background-color: #FFE6D5;
+    display: flex;
+    align-items: center;
+}
+.titulos{
+    height: 200px; 
+    width: 700px;
+    margin-left: 100px;   
+}
+.logo{
+    width: 240px;
+    height: 145px;
+    margin-left: 80px;
+}
+.titulo1{
+    font-family: "Kavoon", serif;
+    font-size: 96px;
+    font-weight: bold;
+    text-align: left;    
+}
+.titulo2{
+    font-family: "Inika", serif;
+    font-size: 20px;
+    text-align: right;
+}
+nav{
+    width: 1280px;
+    height: 62px;
+    background-color: black;    
+    font-family: "Convergence", sans-serif; 
+    font-size: 20px;       
+    display: flex;
+    justify-content: center;    
+}
+nav ul{
+    display: flex;
+    justify-content: center;    
+    gap: 100px;  
+    height: 60px;
+}
+nav ul li{            
+    list-style-type: none;
+    height: 62px;
+    display: block;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 18px;
+    height: 62px;
+    
+}
+nav ul li a:link, a:visited, a:active{
+    color: bisque;
+    
+}
+nav ul li a:hover{
+    background-color: orange;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+main{
+    height: 10rem;
+    background-color: bisque;
+}
