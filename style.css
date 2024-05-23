@@ -1,7 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Convergence&family=Inika:wght@400;700&family=Kavoon&display=swap');
-
-
+*{
+    margin: 0;
+    padding: 0
+}
+body{
+    background-color: #555555;
+}
 #container{
     width: 1280px;
     background-color: black;
@@ -17,7 +21,8 @@ header{
 .titulos{
     height: 200px; 
     width: 700px;
-    margin-left: 100px;   
+    margin-left: 100px;  
+    margin-top: 45px;
 }
 .logo{
     width: 240px;
@@ -37,33 +42,28 @@ header{
 }
 nav{
     width: 1280px;
-    height: 62px;
+    height: 52px;
     background-color: black;    
     font-family: "Convergence", sans-serif; 
     font-size: 20px;       
-    display: flex;
-    justify-content: center;    
 }
 nav ul{
     display: flex;
     justify-content: center;    
-    gap: 100px;  
-    height: 60px;
-}
-nav ul li{            
+    gap: 80px;      
     list-style-type: none;
-    height: 62px;
-    display: block;
+    margin: 0;
+    padding: 0;
 }
 nav ul li a{
-    text-decoration: none;
-    padding: 18px;
-    height: 62px;
-    
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  
 }
 nav ul li a:link, a:visited, a:active{
-    color: bisque;
-    
+    color: bisque;    
 }
 nav ul li a:hover{
     background-color: orange;
@@ -72,6 +72,30 @@ nav ul li a:hover{
 }
 
 main{
-    height: 10rem;
-    background-color: bisque;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 30px;
+}
+article{
+    background-color: #D9D9D9;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center; 
+}
+
+footer{
+    width: 1280px;
+    height: 100px;
+    background-color: #FFE6D5;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;  
+    font-family: "Kavoon", serif;
+}
+footer a:link, a:visited, a:active{
+    text-decoration: none;
+    font-weight: bold;
 }
