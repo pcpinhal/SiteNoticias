@@ -1,3 +1,6 @@
+<?php
+include_once "conexao.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,7 +29,9 @@
         </nav>
         <main>
             <article>
-                conteudo 1
+                <img src="img/exemplo.jpg" alt="foto noticia" class="fotonoticia">
+                <p class="textonoticia">Fãs de “The Simpsons” vão às redes sociais lamentar a morte do querido personagem depois de 35 anos de série.Os fãs prestaram homenagem ao personagem na rede X. “</p>
+                <img src="img/saibamais.png" alt="Saiba Mais" class="saibamais">
             </article>
             <article>
                 conteudo 2

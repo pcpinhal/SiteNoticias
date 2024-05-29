@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS SiteNoticia;
-USE SiteNoticia;
--- DROP DATABASE SiteNoticia;
+CREATE DATABASE IF NOT EXISTS SiteNoticias;
+USE SiteNoticias;
+-- DROP DATABASE SiteNoticias;
 
 CREATE TABLE tb_login(
 id_login					INT NOT NULL AUTO_INCREMENT,
@@ -23,5 +23,12 @@ autor						VARCHAR(255),
 PRIMARY KEY	(id_noticia)
 );
 INSERT INTO tb_noticia (titulo,noticia,imagem,fonte,autor) VALUES 
-('Nosso primeiro POST','Criando um site de noticia','foto1.jpg','Etec Pinhal','Jorge');
+('Primeira noticia','Criando um site de noticia1','exemplo.jpg','Etec Pinhal','Jorge'),
+('Segundo noticia','Criando um site de noticia2','exemplo.jpg','Etec Pinhal','Jorge'),
+('Terceira noticia','Criando um site de noticia3','exemplo.jpg','Etec Pinhal','Jorge'),
+('Quarta noticia','Criando um site de noticia4','exemplo.jpg','Etec Pinhal','Jorge'),
+('Quinta noticia','Criando um site de noticia5','exemplo.jpg','Etec Pinhal','Jorge'),
+('Sexta noticia','Criando um site de noticia6','exemplo.jpg','Etec Pinhal','Jorge'),
+('Setima noticia','Criando um site de noticia7','exemplo.jpg','Etec Pinhal','Jorge');
 SELECT * FROM tb_noticia;
+SELECT * FROM tb_noticia ORDER BY RAND() LIMIT 6;

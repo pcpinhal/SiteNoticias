@@ -84,6 +84,7 @@ article{
     padding: 20px;
     margin: 20px;
     text-align: center; 
+    width: 320px;
 }
 
 footer{
@@ -98,4 +99,16 @@ footer{
 footer a:link, a:visited, a:active{
     text-decoration: none;
     font-weight: bold;
+}
+.fotonoticia{
+    width: 312px;
+    border-radius: 15px;
+}
+.textonoticia{
+    width: 312px;
+    font-size: 16px;
+    font-family: "Inika", serif;
+}
+.saibamais{
+    float: right;
 }
