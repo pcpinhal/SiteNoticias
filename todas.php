@@ -28,23 +28,11 @@ include_once "conexao.php";
             </ul>
         </nav>
         <main id="main-padrao">
-            <?php 
-                $id_noticia = @$_GET['id_noticia'];
-                if($id_noticia)
-                {
-                    $sql = "SELECT * FROM tb_noticia WHERE id_noticia = $id_noticia;";
-                    $resultado = mysqli_execute_query($conexao, $sql);
-                    $dados = mysqli_fetch_array($resultado);
-                    echo "<p class='titulo'>".$dados['titulo']."</p>";
-                    echo "<p class='datahora'>data e hora: ".$dados['datahora']."<br>";
-                    echo "fonte: ".$dados['fonte']."<br>";
-                    echo "autor: ".$dados['autor']."</p>";
-                    echo "<p class='titulo'><img src='img/".$dados['imagem']."' class='imagem-noticia'></p>";                    
-                    echo "<p class='noticia'>".$dados['noticia']."</p>";
-                    echo "<a href='index.php'><span class='endereco'>voltar pagina inicial</span></a>";
-                }else{
-                    echo 'nao tem conteudo :/';
-                }
+            <?php                 
+                $sql = "SELECT * FROM tb_noticia ORDER BY id_noticia DESC;";
+                $resultado = mysqli_execute_query($conexao, $sql);
+                $dados = mysqli_fetch_array($resultado);
+                //terminar link da noticia
             ?>        
         </main>
         <footer>
