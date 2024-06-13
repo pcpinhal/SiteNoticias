@@ -1,5 +1,10 @@
 <?php
 include_once "conexao.php";
+session_start();
+if(!$_SESSION['usuario'])
+{
+    header('Location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,16 +33,7 @@ include_once "conexao.php";
             </ul>
         </nav>
         <main id="main-padrao">
-            <?php                 
-                $sql = "SELECT * FROM tb_noticia ORDER BY id_noticia DESC;";
-                $resultado = mysqli_execute_query($conexao, $sql);                
-                echo "<ol>";
-                while($dados = mysqli_fetch_array($resultado))
-                {
-                    echo "<li><a href='noticia.php?id_noticia=".$dados['id_noticia']."'><p class='endereco'>".$dados['titulo']."</p></a><br></li>";
-                }
-                echo "</ol>";
-            ?>        
+            deu certo !!! uhuu
         </main>
         <footer>
             <a href="#"><img src="img/whats.png" alt="whatsapp" width="226"></a>

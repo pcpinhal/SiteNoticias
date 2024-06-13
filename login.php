@@ -28,16 +28,18 @@ include_once "conexao.php";
             </ul>
         </nav>
         <main id="main-padrao">
-            <?php                 
-                $sql = "SELECT * FROM tb_noticia ORDER BY id_noticia DESC;";
-                $resultado = mysqli_execute_query($conexao, $sql);                
-                echo "<ol>";
-                while($dados = mysqli_fetch_array($resultado))
-                {
-                    echo "<li><a href='noticia.php?id_noticia=".$dados['id_noticia']."'><p class='endereco'>".$dados['titulo']."</p></a><br></li>";
-                }
-                echo "</ol>";
-            ?>        
+            <div class="login">
+                <form action="login.php" method="post">
+                    <label for="txt_usuario">Usuario: </label>
+                    <input type="text" name="txt_usuario" id="txt_usuario" placeholder="Digite seu usuario">
+                    <br>
+                    <label for="txt_senha">Senha: </label>
+                    <input type="password" name="txt_senha" id="txt_senha">
+                    <br>
+                    <input type="submit" value="Entrar" name="btn_entrar" id="btn_entrar">
+                    <input type="reset" value="Limpar" name="btn_limpar" id="btn_limpar">
+                </form>
+            </div>
         </main>
         <footer>
             <a href="#"><img src="img/whats.png" alt="whatsapp" width="226"></a>
