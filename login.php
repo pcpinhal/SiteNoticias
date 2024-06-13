@@ -34,11 +34,34 @@ include_once "conexao.php";
                     <input type="text" name="txt_usuario" id="txt_usuario" placeholder="Digite seu usuario">
                     <br>
                     <label for="txt_senha">Senha: </label>
-                    <input type="password" name="txt_senha" id="txt_senha">
+                    <input type="password" name="txt_senha" id="txt_senha" placeholder="Digite a senha">
                     <br>
                     <input type="submit" value="Entrar" name="btn_entrar" id="btn_entrar">
                     <input type="reset" value="Limpar" name="btn_limpar" id="btn_limpar">
                 </form>
+                <?php
+                    $txt_usuario = @$_POST['txt_usuario'];
+                    $txt_senha = @$_POST['txt_senha'];
+                    $entrar = @$_POST['btn_entrar'];
+                    if(($txt_usuario) && ($txt_senha) && ($entrar))
+                    {
+                        $sql = "SELECT * FROM tb_login WHERE usuario = '$txt_usuario' AND senha = '$txt_senha';";
+                        $resultado = mysqli_execute_query($conexao, $sql);
+                        $dados = mysqli_fetch_array($resultado);
+                        if((@$dados['usuario'] == $txt_usuario) && (@$dados['senha'] == $txt_senha))
+                        {
+                            session_start();
+                            $_SESSION['usuario'] = $txt_usuario;
+                            $_SESSION['senha'] = $txt_senha;
+                            $_SESSION['id_login'] = $dados['id_login'];
+                            header('Location: area.php');
+                        }else{
+                            echo "<div class='erro'>
+                                    <p>Usuario/Senha incorretos !!!</p>
+                                  </div>";                            
+                        }
+                    }
+                ?>
             </div>
         </main>
         <footer>

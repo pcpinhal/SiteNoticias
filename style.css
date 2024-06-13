@@ -148,3 +148,8 @@ footer a:link, a:visited, a:active{
 .login{
     background-color: aqua;
 }
+.erro{
+    background-color: red;
+    color: yellow;
+    font-size: 50px;
+}
