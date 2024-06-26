@@ -33,7 +33,23 @@ if(!$_SESSION['usuario'])
             </ul>
         </nav>
         <main id="main-padrao">
-            deu certo !!! uhuu
+            <h1>Area Administrativa</h1>
+            <h2>Noticias</h2>
+            <ul>
+                <li><a href="add_not.php">Adicionar Noticia</a></li>
+                <li><a href="del_not.php">Remover Noticia</a></li>
+                <li><a href="alt_not.php">Alterar Noticia</a></li>
+            </ul>
+            <h2>Usuario</h2>
+            <ul>
+                <li><a href="add_user.php">Adicionar Usuario</a></li>
+                <li><a href="del_user.php">Remover Usuario</a></li>
+                <li><a href="alt_user.php">Alterar Usuario</a></li>
+            </ul>
+            <h2>Gerenciador</h2>
+            <ul>
+                <li><a href="logout.php">Sair</a></li>
+            </ul>
         </main>
         <footer>
             <a href="#"><img src="img/whats.png" alt="whatsapp" width="226"></a>

@@ -32,3 +32,4 @@ INSERT INTO tb_noticia (titulo,noticia,imagem,fonte,autor) VALUES
 ('Setima noticia','Criando um site de noticia7','exemplo.jpg','Etec Pinhal','Jorge');
 SELECT * FROM tb_noticia;
 SELECT * FROM tb_noticia ORDER BY RAND() LIMIT 6;
+SELECT * FROM tb_noticia ORDER BY id_noticia DESC;
